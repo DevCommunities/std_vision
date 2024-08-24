@@ -15,16 +15,5 @@ for contour in contours:
     x, y, w, h = cv.boundingRect(contour)
     cv.rectangle(parking_lot, (x, y), (x+w, y+h), (0, 255, 0), thickness=2)
 
-<<<<<<< HEAD
-# Draw Rectangle Around Parking Lot
-for component in  parking_lot_components:
-    print(component)
-    contours, _ = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
-    for contour in contours:
-        x, y, w, h = cv.boundingRect(contour)
-        cv.rectangle(parking_lot, (x, y), (x+w, y+h), (0, 255, 0), thickness=2)
-
-=======
->>>>>>> refs/remotes/origin/master
 cv.imshow("Parking Lot Masking", parking_lot)
 cv.waitKey(0)
